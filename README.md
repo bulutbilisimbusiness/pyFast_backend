@@ -29,7 +29,7 @@ FastAPI ile geliştirilmiş, AI destekli kodlama soruları oluşturan modern RES
 
 🌐 **Base URL**: `https://pyfast-backend.fly.dev`
 
-📖 **API Docs**: `https://pyfast-backend.fly.dev/docs`
+📖 **API Docs**: `http://127.0.0.1:8000/redoc`
 
 ## 🏁 Hızlı Başlangıç
 
