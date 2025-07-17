@@ -7,11 +7,8 @@ from dotenv import load_dotenv
 
 # Load .env from backend root directory
 load_dotenv()
-print("Loading .env from backend root directory")
 
 openai_key = os.getenv("OPENAI_API_KEY")
-print(f"OpenAI Key loaded: {bool(openai_key)}")
-print(f"OpenAI Key preview: {openai_key[:20] + '...' if openai_key else 'None'}")
 
 client = OpenAI(
     api_key=openai_key,
@@ -60,7 +57,6 @@ def generate_challenge_with_ai(difficulty: str) -> Dict[str, Any]:
         return challenge_data
 
     except Exception as e:
-        print(f"AI generation failed: {e}")
         return {
             "title": "Basic Python List Operation",
             "options": [

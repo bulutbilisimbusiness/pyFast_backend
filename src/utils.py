@@ -5,17 +5,10 @@ from dotenv import load_dotenv
 
 # Load .env from backend root directory
 dotenv_path = os.path.join(os.path.dirname(__file__), '..', '.env')
-print(f"DEBUG utils.py - Loading .env from: {dotenv_path}")
-print(f"DEBUG utils.py - .env exists: {os.path.exists(dotenv_path)}")
 load_dotenv(dotenv_path=dotenv_path)
 
 # Try loading from current directory as well
 load_dotenv()
-
-print("DEBUG utils.py - CLERK_SECRET_KEY:", bool(os.getenv("CLERK_SECRET_KEY")))
-print("DEBUG utils.py - JWT_KEY:", bool(os.getenv("JWT_KEY")))
-clerk_key = os.getenv('CLERK_SECRET_KEY', 'NOT_FOUND')
-print(f"DEBUG utils.py - CLERK_SECRET_KEY value: {clerk_key[:20]}...")
 
 
 clerk_sdk = Clerk(bearer_auth=os.getenv("CLERK_SECRET_KEY"))
