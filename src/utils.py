@@ -22,6 +22,11 @@ clerk_sdk = Clerk(bearer_auth=os.getenv("CLERK_SECRET_KEY"))
 
 def authenticate_and_get_user_details(request):
     try:
+        jwt_key = os.getenv("JWT_KEY")
+        print(f"DEBUG: JWT_KEY exists: {bool(jwt_key)}")
+        print(f"DEBUG: JWT_KEY preview: {jwt_key[:50] + '...' if jwt_key else 'None'}")
+        print(f"DEBUG: Request headers: {dict(request.headers)}")
+        
         request_state = clerk_sdk.authenticate_request(
             request,
             AuthenticateRequestOptions(
@@ -34,7 +39,7 @@ def authenticate_and_get_user_details(request):
                     "http://127.0.0.1:3000",
                     "https://py-fast-frontend-railway-j6a5a3vgz.vercel.app"
                 ],
-                jwt_key=os.getenv("JWT_KEY")
+                jwt_key=jwt_key
             )
         )
 
