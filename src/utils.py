@@ -37,7 +37,8 @@ def authenticate_and_get_user_details(request):
                     "http://127.0.0.1:5173",
                     "http://127.0.0.1:5174",
                     "http://127.0.0.1:3000",
-                    "https://py-fast-frontend-railway-j6a5a3vgz.vercel.app"
+                    "https://py-fast-frontend-railway.vercel.app",
+                    "https://py-fast-frontend-railway-3wrua3sew.vercel.app"
                 ],
                 jwt_key=jwt_key
             )
