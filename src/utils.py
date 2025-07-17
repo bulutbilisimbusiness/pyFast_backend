@@ -27,11 +27,6 @@ def authenticate_and_get_user_details(request):
         if jwt_key:
             jwt_key = jwt_key.replace('\\n', '\n')
         
-        print(f"DEBUG: JWT_KEY exists: {bool(jwt_key)}")
-        print(f"DEBUG: JWT_KEY preview: {jwt_key[:50] + '...' if jwt_key else 'None'}")
-        print(f"DEBUG: JWT_KEY lines after fix: {jwt_key.count(chr(10)) if jwt_key else 0}")
-        print(f"DEBUG: Request headers: {dict(request.headers)}")
-        
         request_state = clerk_sdk.authenticate_request(
             request,
             AuthenticateRequestOptions(
