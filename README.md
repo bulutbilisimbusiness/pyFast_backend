@@ -27,9 +27,8 @@ FastAPI ile geliştirilmiş, AI destekli kodlama soruları oluşturan modern RES
 
 ## 🚀 Canlı API
 
-🌐 **Base URL**: `https://pyfast-backend.fly.dev`
+🌐 **Base URL**: `https://yfast-backend.up.railway.app`
 
-📖 **API Docs**: `http://127.0.0.1:8000/redoc`
 
 ## 🏁 Hızlı Başlangıç
 
@@ -45,7 +44,7 @@ FastAPI ile geliştirilmiş, AI destekli kodlama soruları oluşturan modern RES
 
 ```bash
 # Repository'i klonlayın
-git clone https://github.com/username/pyfast-backend.git
+git clone https://github.com/bulutbilisimbusiness/pyfast-backend.git
 cd pyfast-backend
 
 # Virtual environment oluşturun
@@ -398,7 +397,7 @@ pytest tests/
 >>>>>>> 57825c7c30021a0ccf5bbb9e8f0dbae3a2552766
 ```bash
 # Health check
-curl http://127.0.0.1:8000/docs#/default/health_check_api_health_get
+curl https://pyfast-backend.up.railway.app/api/health
 
 # Test challenge generation
 curl -X POST https://your-api-url.com/api/generate-challenge \
